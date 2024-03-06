@@ -19,20 +19,20 @@ class WeatherInfo extends StatelessWidget {
       children: [
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 16,
           ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Image.asset(
           imagePath,
           height: 40,
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Text(
           subtext,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 14,
           ),

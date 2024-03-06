@@ -15,11 +15,11 @@ class CustomInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       width: 80,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [Color.fromARGB(255, 82, 13, 222), Color.fromARGB(255, 145, 142, 227), Color.fromARGB(255, 249, 240, 247)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -30,20 +30,20 @@ class CustomInfoCard extends StatelessWidget {
         children: [
           Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 16,
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Image.asset(
             imagePath,
             height: 40,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             subtext,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 14,
             ),

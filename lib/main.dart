@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/anasayfa.dart';
+import 'package:weather_app/features/homepage/views/homepage.dart';
 
 void main() {
   runApp(const MyApp());

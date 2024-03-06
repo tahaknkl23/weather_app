@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/ikinci_sayfa.dart';
+import 'package:weather_app/config/items/app_colors.dart';
+import 'package:weather_app/config/items/linear_colors.dart';
+import 'package:weather_app/config/theme/app_theme.dart';
+import 'package:weather_app/features/current_weather/views/current_weather.dart';
 
 class Anasayfa extends StatefulWidget {
   const Anasayfa({Key? key}) : super(key: key);
@@ -14,24 +17,16 @@ class _AnasayfaState extends State<Anasayfa> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFF805BCA),
-              Color(0xFFDFDEFE),
-              Color(0xFFF6C6EC),
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
+        decoration: const BoxDecoration(
+          gradient: LinearColors.relaxcolor,
         ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              SizedBox(height: 300, child: Image.asset("resimler/weathertree.png")),
+              SizedBox(height: 300, child: Image.asset("assets/pictures/weathertree.png")),
               Column(
-                children: [
+                children: const [
                   Text(
                     "Weather",
                     style: TextStyle(
@@ -43,7 +38,7 @@ class _AnasayfaState extends State<Anasayfa> {
                   Text(
                     "Forecasts",
                     style: TextStyle(
-                      color: Colors.amber,
+                      color: AppColors.amber,
                       fontSize: 32,
                       fontFamily: 'Poppins',
                     ),
@@ -52,29 +47,25 @@ class _AnasayfaState extends State<Anasayfa> {
               ),
               ElevatedButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.amber),
+                  backgroundColor: const MaterialStatePropertyAll(AppColors.amber),
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                   minimumSize: MaterialStateProperty.all(
-                    Size(200, 60),
+                    const Size(200, 60),
                   ),
                 ),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SonrakiSayfa()),
+                    MaterialPageRoute(builder: (context) => const SonrakiSayfa()),
                   );
                 },
-                child: Text(
+                child: const Text(
                   "Get Start",
-                  style: TextStyle(
-                    color: Colors.purple,
-                    fontSize: 24,
-                    fontFamily: 'Poppins',
-                  ),
+                  style: AppTheme.weatherTextStyle24,
                 ),
               ),
             ],
